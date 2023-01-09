@@ -6,16 +6,12 @@ int main()
     for(;n>0;)
     {
         d=n%10;
-        s+=d;
-        p*=d;
-        n/=10;
+        s=s+d;
+        p=p*d;
+        n=n/10;
     }
     if(s==p)
-    {
-        printf("Spy Number");
-    }
+    printf("Spy Number");
     else
-    {
-        printf("Not Spy Number");
-    }
+    printf("Not Spy Number");
 }

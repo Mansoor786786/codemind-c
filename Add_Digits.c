@@ -8,7 +8,7 @@ int main()
         r=n%10;
         n/=10;
         s=s+r;
-        if(n==0&&s>9)
+        if(n==0 && s>9)
         {
             n=s;
             s=0;

@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int n,rem,sum=0,pro=1;
+    int r,n,sum=0,product=1;
     scanf("%d",&n);
     while(n>0)
     {
-        rem=n%10;
-        n/=10;
-        sum+=rem;
-        pro*=rem;
+        r=n%10;
+        n=n/10;
+        sum=sum+r;
+        product=product*r;
     }
-    printf("%d",(pro-sum));
+    printf("%d",product-sum);
 }

@@ -1,26 +1,32 @@
-#include<stdio.h>
-int main()
+#include <stdio.h>
+int maximum69Number (int num) 
 {
-    int n,d,a[10],i,j;
-    scanf("%d",&n);
-    i=0;
-    while(n!=0)
-    {
-        d=n%10;
-        n=n/10;
-        a[i]=d;
-        i++;
+    int arr[4];
+    
+    int i=3;
+    while(num!=0){
+        arr[i--]=num%10;
+        num/=10;
     }
-    for(j=i-1;j>=0;j--)
+    for(i=0;i<=3;i++)
     {
-        if(a[j]==6)
+        if(arr[i]==6)
         {
-            a[j]=9;
-            break;
+            arr[i]=9;break;
+            
         }
     }
-    for(j=i-1;j>=0;j--)
+    int ans=0,mul=1;
+    for(i=3;i>=0;i--)
     {
-        printf("%d",a[j]);
+        ans+=(mul*arr[i]);
+        mul*=10;
     }
+    return ans;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d",maximum69Number(n));
 }
